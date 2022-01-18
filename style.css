@@ -1,0 +1,125 @@
+body{
+    background: rgb(206, 167, 245);
+}
+*{
+    font-size: 1.5rem;
+}
+.wrapper > *{
+    padding: 1rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
+.wrapper{
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.3rem;
+    grid-template-areas:
+    "header header header"
+    "title title title"
+    "banner banner bb1"
+    "banner banner bb2"
+    "side-menu main main"
+    "recent main main"
+    "tags main main"
+    "footer footer footer"
+
+    ;
+}
+
+.header{
+    background: black;
+    color: blanchedalmond;
+    grid-area: header;
+}
+.title{
+    background: brown;
+    grid-area: title;
+}
+.banner{
+
+    background: radial-gradient(blue,yellow,grey);
+    grid-area: banner;
+}
+.bb1{
+    background: aqua ;
+    grid-area: bb1;
+}
+.bb2{
+    background: coral;
+    grid-area: bb2;
+}
+.side-menu{
+    background: lime;
+    grid-area: side-menu;
+}
+.tags{
+    background: maroon;
+    grid-area: tags;
+}
+.recent{
+    background: purple;
+    grid-area: recent;
+}
+.main{
+    grid-area: main;
+    background: linear-gradient(to left,red,orange,pink);
+}
+
+
+
+
+
+
+
+
+
+
+.footer{
+    background: black;
+    color: blanchedalmond;
+    grid-area: footer;
+}
+
+
+@media(max-width:768px)
+{
+    .wrapper{
+        
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-areas:
+        "header header "
+        "title title "
+        "banner banner"
+        "banner banner"
+        "bb1 bb2"
+        "side-menu side-menu"
+        "main main"
+        "recent tags"
+        "footer footer "
+    
+    }
+}
+@media(max-width:480px)
+{
+    .wrapper{
+        
+        grid-template-columns: repeat(1, 1fr);
+
+        grid-template-areas:
+        "header "
+        "title  "
+        "banner "
+        "bb1"
+        "bb2"
+        "side-menu"
+        "main"
+        "recent" 
+        "tags"
+        "footer"
+    
+    }
+}
